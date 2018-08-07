@@ -1,0 +1,19 @@
+.verticalDisplay {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1
+}
+
+.mapMenu {
+  min-width: 100px;
+  position: fixed;
+  right: 5px;
+  width: 10vw;
+}
+
+.LeftMenu {
+  left: 5px;
+  min-width: 100px;
+  position: fixed;
+  width: 10vw;
+}

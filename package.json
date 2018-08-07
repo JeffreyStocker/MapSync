@@ -1,0 +1,41 @@
+{
+  "name": "mapsync",
+  "version": "1.0.0",
+  "description": "Designed to show a map that is synced across clients from master",
+  "main": "index.js",
+  "scripts": {
+    "babel3": "babel --watch src --out-public . --presets react-app/prod",
+    "babel2": "node_modules/.bin/tap  babel --watch src --out-public . --presets react-app/prod",
+    "babel": "babel src -d public --watch",
+    "start": "node ./index.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "map",
+    "d&d",
+    "sync"
+  ],
+  "author": "Jeffrey Stocker",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "socket.io": "^2.1.1",
+    "socket.io-stream": "^0.9.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2016": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^2.0.14"
+  }
+}
