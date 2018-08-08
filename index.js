@@ -14,15 +14,15 @@ app.get("/", (req, res) => {
 });
 
 
-const server = http.createServer(app);
+const server = http.Server(app);
 
 server.listen(port, () => {
   console.log('Server Listening on port:', port)
 });
 
-const socket = socketIo(server);
+const socket = socketIo(server).listen(server);
 
-socket.on('connection', function () {
+socket.on('connection', function (socket) {
   console.log ('connected');
 })
 
