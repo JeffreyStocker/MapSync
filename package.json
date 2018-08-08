@@ -4,11 +4,10 @@
   "description": "Designed to show a map that is synced across clients from master",
   "main": "index.js",
   "scripts": {
-    "babel3": "babel --watch src --out-public . --presets react-app/prod",
-    "babel2": "node_modules/.bin/tap  babel --watch src --out-public . --presets react-app/prod",
-    "babel": "babel src -d public --watch",
+    "dev": "concurrently -c \"green,cyan\" \"webpack --watch\" \"node ./index.js\"",
     "start": "node ./index.js",
-    "test": "mocha"
+    "test": "mocha",
+    "webpack": "webpack --watch"
   },
   "keywords": [
     "map",
@@ -21,7 +20,9 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.6.1",
     "express": "^4.16.3",
+    "leaflet": "^1.3.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "socket.io": "^2.1.1",
