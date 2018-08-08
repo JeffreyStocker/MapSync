@@ -5,7 +5,7 @@
 }
 
 .mapMenu {
-  min-width: 100px;
+  min-width: 50px;
   position: fixed;
   right: 5px;
   width: 10vw;
@@ -13,7 +13,49 @@
 
 .LeftMenu {
   left: 5px;
-  min-width: 100px;
+  min-width: 75px;
   position: fixed;
   width: 10vw;
+}
+
+.topOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.topOverlayExit {
+  z-index: 10;
+}
+
+.transparentBlackBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.topOverlayCenter {
+  z-index: 1100;
+  border: 1px solid black;
+  padding: 30px;
+  background-color: black;
+}
+
+.flex-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload {
+
+}
+
+.backgroundWhite {
+  background-color: white;
+}
+
+#map {
+  height: 80vh;
 }
