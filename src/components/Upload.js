@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import IO from 'socket.io/lib/client';
-import stream from 'socket.io-stream';
 import autobind from '../utilties';
-
-
 
 export default class UploadBox extends Component {
   constructor (props) {
