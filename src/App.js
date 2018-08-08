@@ -3,6 +3,8 @@ import Entry from './components/EntryChoice';
 import DM from './components/DM';
 import Player from './components/Player';
 
+import Socket from './socket';
+
 export default class App extends Component {
   constructor(props) {
     super(props);
