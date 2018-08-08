@@ -4,8 +4,9 @@
   "description": "Designed to show a map that is synced across clients from master",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently -c \"green,cyan\" \"webpack --watch\" \"node ./index.js\"",
+    "dev": "concurrently -c \"green,cyan\" \"npm:nodemon\" \"npm:webpack\" ",
     "start": "node ./index.js",
+    "nodemon": "nodemon",
     "test": "mocha",
     "webpack": "webpack --watch"
   },
@@ -38,5 +39,12 @@
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.5",
     "webpack-cli": "^2.0.14"
+  },
+  "nodemonConfig": {
+    "ignore": ["src/*", "public/*"],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development"
+    }
   }
 }
