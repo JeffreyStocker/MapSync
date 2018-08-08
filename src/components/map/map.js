@@ -1,14 +1,20 @@
-import React from 'react';
-import MapMenu from './menu'
-import Overlay from './overlay'
+import React, { Component } from 'react';
 
-export default function Map(props) {
-  return (
-    <div className="map">
-      {/* map goes here */}
-      map
-      <Overlay />
-      <MapMenu />
-    </div>
-  )
+import Overlay from './overlay'
+import ShowMap from './showMap';
+
+export default class Map extends Component {
+  constructor (props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="map">
+        map
+        <ShowMap />
+        {this.props.mapLocation && <img src={this.props.mapLocation} />}
+        <Overlay />
+      </div>
+    )
+  }
 }
